@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <title>Chat Socket.io</title>
+  </head>
+  <body>
+
+    <div id="app-header">
+      <h1 class="app-title">Chat Socket.io</h1>
+      <h2 id="app-title-user"></h1>
+    </div>
+
+    <div id="app-chat"></div>
+
+    <div id="app-input">
+      <input id="input-chat" type="text" name="" value="" onkeypress="key(event)">
+    </div>
+
+    <input type="file" name="file" id="file" class="inputfile" onchange="handleFiles(this.files)" multiple />
+    <label for="file"></label>
+
+    <div class="send-message" onclick="sendMessage()"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+
+  </body>
+</html>
